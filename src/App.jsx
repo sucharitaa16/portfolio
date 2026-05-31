@@ -204,7 +204,7 @@ const Portfolio = () => {
       ]
     },
     {
-      date: '2023',
+      date: '2025',
       role: 'Blockchain Food Supply Chain — Full Stack Developer',
       company: 'Web3 Supply Chain Project',
       points: [
@@ -591,7 +591,7 @@ const Portfolio = () => {
           </div>
           <div className="relative pl-6 mt-10 before:absolute before:left-3 before:top-0 before:bottom-0 before:w-px before:bg-gradient-to-b before:from-[#00d4ff] before:via-[#00ff9d] before:to-transparent">
             {experiences.map((exp, idx) => (
-              <div key={exp.date} className={`relative pb-12 last:pb-0 before:absolute before:left-[-1.35rem] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-gradient-to-r before:from-[#00d4ff] before:to-[#00ff9d] before:border-2 before:border-[#080b10] before:shadow-[0_0_0_4px_rgba(0,212,255,0.1)] ${
+              <div key={`${exp.date}-${idx}`} className={`relative pb-12 last:pb-0 before:absolute before:left-[-1.35rem] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-gradient-to-r before:from-[#00d4ff] before:to-[#00ff9d] before:border-2 before:border-[#080b10] before:shadow-[0_0_0_4px_rgba(0,212,255,0.1)] ${
                 visibleSections.includes('experience') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`} style={{ transitionDelay: `${idx * 100}ms` }}>
                 <div className="bg-[#0e1219] rounded-xl p-6 border border-[#1e2a38] hover:border-[#00d4ff]/30 transition-all duration-300 hover:translate-x-1">
