@@ -149,7 +149,8 @@ const Portfolio = () => {
       tagline: 'AI-Powered Code Optimization Platform',
       desc: 'Built an AI-powered platform to analyze and optimize source code for performance, readability, and carbon efficiency. Integrated LLM APIs with rule-based fallbacks and exposed clean REST endpoints. Features real-time code analysis, automated fix suggestions, and detailed performance metrics dashboard.',
       stack: ['React.js', 'Node.js', 'Express.js', 'LLM APIs', 'REST API', 'Tailwind CSS', 'Render', 'MongoDB'],
-      color: '#00d4ff'
+      color: '#00d4ff',
+      link:'https://github.com/heyiamsouvik/Carbon_Code'
     },
     {
       num: '02',
@@ -158,7 +159,9 @@ const Portfolio = () => {
       tagline: 'GLOF Early Warning System',
       desc: 'End-to-end monitoring solution for Glacial Lake Outburst Flood risks. Automates satellite and sensor data collection for real-time threat analysis, generates high-precision flood warnings, and dispatches critical alerts to NGOs and local authorities. Reduced response time by 60% through optimized alert system.',
       stack: ['React.js', 'Node.js', 'MongoDB', 'WebSocket', 'Satellite Data APIs', 'Real-time Alerts', 'Tailwind CSS'],
-      color: '#00ff9d'
+      color: '#00ff9d',
+      link:
+      'https://glof-sentinel.onrender.com/'
     },
     {
       num: '03',
@@ -167,7 +170,8 @@ const Portfolio = () => {
       tagline: 'Web2.5 Integrity Platform',
       desc: 'Blockchain-based supply chain platform using cryptographic anchoring for data integrity. Hybrid Web2.5 architecture ensures fast retrieval with blockchain security. Implemented OTP-based ownership transfer, admin verification system, and real-time product tracking across the supply network.',
       stack: ['React.js', 'Node.js', 'MongoDB', 'Web3.js', 'Cryptography', 'OTP Auth', 'Tailwind CSS', 'Express.js'],
-      color: '#ff6b6b'
+      color: '#ff6b6b',
+      link:'https://agro-trace-nine.vercel.app/'
     }
   ];
 
@@ -350,14 +354,27 @@ const Portfolio = () => {
               Specializing in modern full-stack development with a designer's eye for detail — creating experiences that users love.
             </p>
             <div className="flex gap-4 flex-wrap">
-              <button
+              {/* <button
                 onClick={() => scrollToSection('projects')}
                 className="group font-['JetBrains_Mono',monospace] text-xs tracking-[0.1em] uppercase px-7 py-3.5 bg-gradient-to-r from-[#00d4ff] to-[#00ff9d] text-[#080b10] font-semibold cursor-pointer border-none transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(0,212,255,0.3)] flex items-center gap-2"
                 style={{ clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}
               >
                 View Projects
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </button>
+              </button> */}
+
+
+
+              <a
+  href="https://your-project-link.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group font-['JetBrains_Mono',monospace] text-xs tracking-[0.1em] uppercase px-7 py-3.5 bg-gradient-to-r from-[#00d4ff] to-[#00ff9d] text-[#080b10] font-semibold cursor-pointer border-none transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(0,212,255,0.3)] flex items-center gap-2"
+  style={{ clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}
+>
+  View Projects
+  <span className="group-hover:translate-x-1 transition-transform">→</span>
+</a>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="font-['JetBrains_Mono',monospace] text-xs tracking-[0.1em] uppercase px-7 py-3.5 bg-transparent text-[#e8edf5] border border-[#263344] cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:text-[#00d4ff] hover:scale-105"
@@ -564,10 +581,22 @@ const Portfolio = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-[#4a5a6e] group-hover:text-[#00d4ff] transition-all duration-300 group-hover:translate-x-1">
+                  {/* <div className="flex items-center gap-2 text-[#4a5a6e] group-hover:text-[#00d4ff] transition-all duration-300 group-hover:translate-x-1">
                     <span className="font-['JetBrains_Mono',monospace] text-sm">View Project</span>
                     <span className="text-xl">↗</span>
-                  </div>
+                  </div> */}
+
+                  <a
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-[#4a5a6e] group-hover:text-[#00d4ff] transition-all duration-300 group-hover:translate-x-1"
+>
+  <span className="font-['JetBrains_Mono',monospace] text-sm">
+    View Project
+  </span>
+  <span className="text-xl">↗</span>
+</a>
                 </div>
               </div>
             ))}
